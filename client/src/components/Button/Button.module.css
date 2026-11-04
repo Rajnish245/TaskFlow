@@ -1,0 +1,98 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: 1.5px solid transparent;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition), box-shadow var(--transition),
+    opacity var(--transition);
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Variants ─────────────────────────────────────────────────────────────── */
+.primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.secondary {
+  background: var(--secondary);
+  color: var(--text);
+  border-color: var(--border);
+}
+.secondary:hover:not(:disabled) {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: var(--danger);
+}
+.danger:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.35);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--primary);
+  border-color: transparent;
+}
+.ghost:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+
+/* ── Sizes ────────────────────────────────────────────────────────────────── */
+.sm {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+}
+.md {
+  padding: 0.5rem 1.125rem;
+  font-size: 0.9375rem;
+}
+.lg {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.0625rem;
+}
+
+/* ── States ───────────────────────────────────────────────────────────────── */
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Loading: show spinner absolutely centred, hide text visually */
+.loading {
+  cursor: wait;
+}
+
+.spinnerWrap {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiddenText {
+  opacity: 0;
+}
